@@ -42,7 +42,7 @@ public class StudentService {
     }
 
     @Transactional
-    public void updatestudent(Long studentId, String name, String email) {
+    public void updateStudent(Long studentId, String name, String email) {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new IllegalStateException(
                         "student with id " + studentId + " does not exist"));
